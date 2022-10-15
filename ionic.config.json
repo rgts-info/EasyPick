@@ -1,0 +1,7 @@
+{
+  "name": "appflyer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
