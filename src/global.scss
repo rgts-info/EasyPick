@@ -30,3 +30,106 @@
 ion-content {
     --background: #e9e9e9;
 }
+
+ion-loading.custom-loading{  
+    .loading-wrapper.sc-ion-loading-md{
+      background: transparent !important;
+      box-shadow: none !important;
+      --spinner-color: cornsilk !important;
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Ensure this is on top of other content */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #0000ff; /* Change this color */
+    box-shadow: 32px 0 #0000ff, -32px 0 #0000ff; /* Change these colors */
+    position: relative;
+    animation: flash 0.3s ease-in infinite alternate;
+}
+
+.loader::before, .loader::after {
+    content: '';
+    position: absolute;
+    left: -64px;
+    top: 0;
+    background: #0000ff; /* Change this color */
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform-origin: 35px -35px;
+    transform: rotate(45deg);
+    animation: hitL 0.3s ease-in infinite alternate;
+}
+
+.loader::after {
+    left: 64px;
+    transform: rotate(-45deg);
+    transform-origin: -35px -35px;
+    animation: hitR 0.3s ease-out infinite alternate;
+}
+
+@keyframes flash {
+    0%, 100% {
+        background-color: rgba(0, 0, 255, 0.25); /* Change this color */
+        box-shadow: 32px 0 rgba(0, 0, 255, 0.25), -32px 0 rgba(0, 0, 255, 0.25); /* Change these colors */
+    }
+
+    25% {
+        background-color: rgba(0, 0, 255, 0.25); /* Change this color */
+        box-shadow: 32px 0 rgba(0, 0, 255, 0.25), -32px 0 rgba(0, 0, 255, 1); /* Change these colors */
+    }
+
+    50% {
+        background-color: rgba(0, 0, 255, 1); /* Change this color */
+        box-shadow: 32px 0 rgba(0, 0, 255, 0.25), -32px 0 rgba(0, 0, 255, 0.25); /* Change these colors */
+    }
+
+    75% {
+        background-color: rgba(0, 0, 255, 0.25); /* Change this color */
+        box-shadow: 32px 0 rgba(0, 0, 255, 1), -32px 0 rgba(0, 0, 255, 0.25); /* Change these colors */
+    }
+}
+
+@keyframes hitL {
+    0% {
+        transform: rotate(45deg);
+        background-color: rgba(0, 0, 255, 1); /* Change this color */
+    }
+    25%, 100% {
+        transform: rotate(0deg);
+        background-color: rgba(0, 0, 255, 0.25); /* Change this color */
+    }
+}
+
+@keyframes hitR {
+    0%, 75% {
+        transform: rotate(0deg);
+        background-color: rgba(0, 0, 255, 0.25); /* Change this color */
+    }
+
+    100% {
+        transform: rotate(-45deg);
+        background-color: rgba(0, 0, 255, 1); /* Change this color */
+    }
+}
+
