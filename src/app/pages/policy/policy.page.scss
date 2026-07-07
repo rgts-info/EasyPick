@@ -1,0 +1,31 @@
+
+
+    .gradient-1 {
+        --background: linear-gradient(180deg,#84a3b7,#61879d);
+        background: linear-gradient(180deg,#84a3b7,#61879d);
+    }
+    .sign-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .header {
+        flex: 1;
+    }
+
+    .dashLine {
+        float: none;
+        margin: 10px 0px;
+        margin-top: 0px;
+        border-bottom: 1px dotted #999;
+    }
+
+    ion-content{
+        background: auto;
+        --background: auto;
+    }
+
+
+

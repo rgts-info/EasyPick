@@ -1,0 +1,140 @@
+// ion-grid {
+//     --ion-grid-padding-sm: 20px;
+//     --ion-grid-padding-md: 30px;
+//     --ion-grid-padding-lg: 40px;
+//     --ion-grid-padding-xl: 100px;
+// }
+
+ion-img, img {
+    touch-action: pan-x pan-y;
+    user-select: none;
+}
+
+img {
+    touch-action: pan-x pan-y;
+    user-select: none;
+    transition: transform 0.25s ease;
+}
+
+// img.responsive-img {
+//     max-width: 100%;       /* Ensures the image does not exceed the width of its container */
+//     max-height: 33.33vh;   /* Limits the image height to one-third of the viewport height */
+//     height: auto;          /* Maintains the original aspect ratio */
+//     width: auto;           /* Ensures the image scales proportionately */
+//     touch-action: pan-x pan-y;
+//     user-select: none;
+//     transition: transform 0.25s ease;
+//   }
+
+  img.responsive-img {
+    max-width: 100%;
+    max-height: 33.33vh;   /* Limits the image height to one-third of the viewport height */
+    height: auto;
+    width: auto;
+    touch-action: manipulation;
+    user-select: none;
+    transition: transform 0.25s ease;
+  }
+  
+
+/* Add these styles to your component's SCSS file */
+// .zoom-enabled {
+//     touch-action: pan-x pan-y;
+//     user-select: none;
+//     transition: transform 0.25s ease;
+//   }
+  
+//   .zoom-enabled img {
+//     max-width: 100%;
+//     max-height: 33.33vh;  /* Adjust height as needed */
+//     height: auto;
+//     width: auto;
+//   }
+  
+
+  
+// img {
+//     transition: transform 0.25s ease;
+// }
+  
+
+ion-card{
+    background: cornsilk;
+}
+
+ion-card-title{
+    color: black;
+}
+
+.swiper-button-next{
+    font-weight: 900;
+}
+
+.swiper-button-prev{
+    font-weight: 900;
+}
+.swiper {
+    --swiper-pagination-color: #fff;
+}
+
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px));
+}
+
+.img-wrapper {
+    // min-height: 200px;
+    // width: 100%;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+//url(assets/img/Snapshot_7.PNG)
+// ion-content{
+//     // --background: url('assets/img/Snapshot_7.PNG')  no-repeat cover fixed center;
+
+//     // background: url('assets/img/Snapshot_7.PNG') no-repeat fixed center; 
+//     // -webkit-background-size: cover;
+//     // -moz-background-size: cover;
+//     // background-size: cover;
+
+//     --background:none;
+//     background:url('assets/img/Snapshot_7.PNG');
+//     background-size: 100% 100%;
+//     background-position: center center;
+
+.scan_problems{
+    display: flex;
+    justify-content: center;
+}
+
+.quickStarted{
+    font-size: medium;
+    color: black;
+}
+.text_bolder{
+    font-weight:bolder;
+    color: red;
+    font-size: larger;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+
+#right-3lines {
+    position: relative;
+    float: left;
+    // width: 81%;
+    // padding-top: 3px;
+    // padding-bottom: 2px;
+    // height:100%;
+}
+
+
+
+// }

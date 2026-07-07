@@ -1,0 +1,176 @@
+<ion-content>
+  <!-- <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <!&& <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="2" *ngFor="let p of products | async"> &&>
+      <ion-col size="12" size-sm="2" size-md="2" size-lg="2" size-xl="2" *ngFor="let p of products | async">
+        <ion-card>
+          <img [src]="p.image">
+          <ion-card-content>
+            <ion-label>
+              {{ p.title}}
+              <p>{{ p.price | currency:'USD' }}</p>
+            </ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <!-- <ion-grid>
+    <ion-row>
+      <!&& <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let image of [1,2]"> &&>
+        <!&& <div class="img-wrapper" [style.background-image]="'url(assets/img/ionic-image-gallery-' + image + '.png)'"> &&>
+        <ion-col size="12">
+          <div class="img-wrapper" [style.background-image]="'url(assets/img/Snapshot_7.PNG)'">
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> scanquestion.png-->
+
+  <img src="assets/img/Snapshot_20.PNG" alt="走地通下載">
+
+  <!-- <ion-button shape="round" expand="block" (click)="webShare()">Web Share</ion-button> -->
+
+  <div style="display:flex; justify-content: center;">
+    <ion-card>
+      <img alt="掃描問題" src="assets/img/scan_problem_1024_300.png" />
+      <ion-card-header>
+        <ion-card-title>走地通下載連結分享</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        祗需耍按下面藍色掣，就可以將走地通下載連結轉發到閣下手機的社交媒體或電子郵箱，於手機中打開連結即可下載及安裝。
+      </ion-card-content>
+
+      <ion-button style="margin-left: 16px;" (click)="webShare()">轉發</ion-button>
+
+    </ion-card>
+    
+  </div>
+  <!-- <h2>免費試用步驟</h2> -->
+
+  <div style="display:flex; justify-content: center;">
+    <ion-card>
+      <img style="height: 900px" alt="免費試用" src="assets/img/Snapshot_12.PNG" />
+      <ion-card-header>
+        <ion-card-title>用戶免費試用步驟</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted">
+          <li>
+            由主頁按走地掣(圖片1)
+          </li>
+          <li>
+            於賽事選擇頁中按免費試用掣(圖片2)。注意：如免費試用掣為灰色，代表這賽馬日的免費試用名額已滿，而免費試用將於每個賽馬日前之排位日開始按受登記，額滿即止。
+          </li>
+          <li>
+            於套餐選擇頁中按全餐及確認掣(圖片3)。
+          </li>
+          <li>
+            於登入/註冊頁中輸入已註冊的電郵地址及密碼後按確認掣，還未註冊用戶請按註冊掣(圖片4)。
+          </li>
+          <li>
+            成功登入後按進入交易區掣(圖片5)。
+          </li>
+          <li>
+            於交易頁中按藍色掣(圖片6)。
+          </li>
+          <li>
+            登記免費試用步驟已完成，按進入主頁掣(圖片7)。
+          </li>
+        </ol>
+      </ion-card-content>
+  
+      <!-- <ion-button style="margin-left: 16px;">Default</ion-button> -->
+  
+    </ion-card>
+  </div>
+
+  <div style="display:flex; justify-content: center;">
+    <ion-card>
+      <img style="height: 900px" alt="快速入門指南" src="assets/img/quick_start_7.PNG" />
+      <ion-card-header>
+        <ion-card-title>快速入門指南(即場-高水/低水馬)</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted">
+          <li>
+            由主頁按走地掣(圖片1)
+          </li>
+          <li>
+            於賽事選擇頁中按投注分佈掣(圖片2)。
+          </li>
+          <li>
+            向左方滾動至運指數據欄(圖片3)，預設即場高水/低水馬數據(圖片3)將會按照不同時段自動更新。
+          </li>
+          <li>
+            投注分佈設計源於一條簡單公式：<span class="text_bolder">賠率＝？</span>。舉個例子：金鎗六十於某埸賽事獨贏賠率為1.5倍大熱門，代表金鎗六十於這場賽事中實力狀態"比較"同場對手為高(最高/最好實力狀態)，用英文字母A代表大熱門、B代表次熱門、C代表第三熱門等等，再用A代表實力狀態最高馬匹，B代表實力狀態排序第二馬匹，C排序第三等等，將金鎗六十套用以上公式(標籤): A = A，走地通會標籤金鎗六十於這埸賽事為平水大熱門馬；假如金鎗六十於這埸賽事獨贏賠率為2.3倍次熱門(B)，套用以上公式(標籤)為: B = A 走地通會標籤金鎗六十於這埸賽事為低水馬。而投注分佈就是將這公式(標籤)擴大、優化和自動化。首先，投注分佈不祇是單看獨贏賠率，而是將所有可計算到的投注種類分為三個組合，第一組合：獨贏(W)，位置(P)，孖寶(D) WPD，第二組合：連贏(Q)、位置Q(QP) Q+QP，第三組合: 第一組合+第二組合 WPD+QQP。所有組合數據建基於馬會即時投注額，100%透明度。
+          </li>
+          <li>
+            走地通將每場30分鐘賽事區分成7個時段：1分鐘，3分鐘， 馬匹離開沙圈，過關後，過關前，2場過關前，隔夜。再將這些時段分為2組: 沙後(1分鐘,3分鐘,馬匹離沙圈)、沙前(過關後,過關前,2場過關前,隔夜)，投注分佈如圖片3:預設即場高水/低水馬欄中選用了時段淨流入數據作為與AI排序欄(實力狀態)比較及釐定高水/低水馬。
+          </li>
+          <li>
+            參考圖片4中之1號馬，於1分鐘時段其獨贏(W)，位置(P)，孖寶(D) WPD投注額的總和為$2,207,736，而3分鐘時段則為$1,850,385，所以1號馬在1分鐘到3分鐘時段淨流入投注金額是$357,351($2,207,736 - $1,850,385)，同樣地用英文字母A代表最高淨流入投注金額，B代表第二高淨流入投注金額，C代表第三高等，再將這組數據顯示在WPD(沙後)數據欄中(圖片4)，其他時段淨流入數據亦是同樣做法。而於預設即場高水/低水馬欄中的英文字母為綠色，代表這時段的排序高過對上一個時段排序(A最高，N最低-14匹馬)。
+          </li>
+          <li>
+            投注分佈運用人工智能，於每場賽事中計算馬匹實力狀態，然後用英文字母去排序，A為最高(好)實力狀態，N為最低(差)實力狀態-14匹馬，這組數據將於AI排序欄中顯示。而馬匹實力狀態計算方法包括晨操完整性，往績同程時間比較，騎練配搭，馬匹體重，配備轉變，同場對賽成績等。正如之前金鎗六十例子一樣將AI排序欄數據(馬匹實力狀態)比較預設即場高水/低水馬欄中所有時段投注金額淨流入數據從以標籤各參賽馬匹為高水或低水馬。例如1號馬(圖片4)AI排序為B，而於WPD(沙後)1分鐘到3分鐘淨流入投注金額排序為G，所以1號馬於這時段標籤為低水馬，而投注分佈會自動化地執行這比較工序，用不同顏色顯示於馬號、馬名欄中，如圖片4中這場賽事高水馬為4,5,8,9,11。
+          </li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div style="display:flex; justify-content: center;">
+    <ion-card>
+      <img style="height: 900px" alt="快速入門指南(即場-旺勢指數)" src="assets/img/quick_start_nsi_3.PNG" />
+      <ion-card-header>
+        <ion-card-title>快速入門指南(即場-旺勢指數)</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted">
+          <li>
+            旺勢指數是由賽馬日第二場開始計算所有已完成賽事騎師、練馬師、檔位、馬匹編號等的綜合表現，再將以上元素融合變成一個數字(圖片1)。而這指數自動顯示時間為即場賽事開跑前大約10分鐘。
+          </li>
+          <li>
+            建議配合上一節高水/低水馬數據一同使用。
+          </li>
+          <li>
+            從過去三個馬季數據分析高水/低水馬入三甲比例為6比4，每個賽馬日高水馬入三甲的百分率為60%，低水馬為40%。例如某個賽馬日有10場賽事，總共有30匹馬入到頭三名，所以會有大約18匹高水馬入到三甲。
+          </li>
+          <li>
+            (重要)充份利用18匹高水馬入到三甲這中位數，例如當跑完第6/7場賽事後，己有12/13匹高水馬入到三甲，投注組合就不應祗選取高水馬，以1拖3投注組合為例，高低水馬比例建議為2比2，二匹高水+二匹低水馬。
+          </li>
+          <li>
+            (重要)檢視已完成賽事高/低水馬入三甲數據，方法1(圖片2): 於場次選擇頁中按A.I排序掣，然後再按名次掣(圖片3)。方法2(圖片4): 於場次選擇頁中按正式派彩掣，然後再按詳細彩果掣(圖片5)。圖片顯示的這場賽事有2匹高水馬入到三甲，而跑第3的3號馬其旺勢指數值是最高頭3位之一。
+          </li>
+          <li>
+            安裝完走地通程式後，於首頁功能簡介中按旺勢指數或投注分佈掣(圖片6)，就可觀看相關影片從而獲取更多資訊(圖片7)。
+          </li>
+          <li>
+            於非賽馬日時應多參考過往數據及多點練習走地通運作模式，於首頁按賽事重溫掣(圖片8)，再選擇賽馬日(圖片9)。
+          </li>
+        </ol>
+      </ion-card-content>
+
+  <!-- <ion-button style="margin-left: 16px;">Default</ion-button> 
+  而旺勢指數嘅組成,基本上就係根據賽馬日中,騎師,練馬師,檔位同馬匹編號嘅表現,而將以上嘅元素結合,變成一個數字,我哋叫佢做旺勢指數,而呢個指數,將會應用響每隻即場嘅馬匹身上 頭三位
+  -->
+
+  </ion-card>
+</div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Footer - No Border</ion-title>
+  </ion-toolbar>
+</ion-footer>

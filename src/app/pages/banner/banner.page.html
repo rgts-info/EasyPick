@@ -1,0 +1,453 @@
+<ion-content>
+  <!-- <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <!&& <ion-col size="12" size-sm="6" size-md="4" size-lg="3" size-xl="2" *ngFor="let p of products | async"> &&>
+      <ion-col size="12" size-sm="2" size-md="2" size-lg="2" size-xl="2" *ngFor="let p of products | async">
+        <ion-card>
+          <img [src]="p.image">
+          <ion-card-content>
+            <ion-label>
+              {{ p.title}}
+              <p>{{ p.price | currency:'USD' }}</p>
+            </ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+  <!-- <ion-grid>
+    <ion-row>
+      <!&& <ion-col sizeLg="6" sizeMd="6" sizeXs="12" *ngFor="let image of [1,2]"> &&>
+        <!&& <div class="img-wrapper" [style.background-image]="'url(assets/img/ionic-image-gallery-' + image + '.png)'"> &&>
+        <ion-col size="12">
+          <div class="img-wrapper" [style.background-image]="'url(assets/img/Snapshot_7.PNG)'">
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> scanquestion.png-->
+
+  <!-- NOTE: 11092022 For quickstart, no need to display the download info as the user should already installed the app
+  <img *ngIf= "!running_on_mobile_boolean" src="assets/img/Snapshot_20.PNG" alt="走地通下載">
+
+  <img *ngIf= "running_on_mobile_boolean" src="assets/img/google-play-badge.png" alt="走地通下載" (click)="openGoogleAppStore()">
+  -->
+
+
+  <!-- <ion-button shape="round" expand="block" (click)="webShare()">Web Share</ion-button> -->
+
+  <!-- 
+  <div *ngIf= "!running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <img alt="掃描問題" src="assets/img/scan_problem_1024_300.png" />
+      <ion-card-header>
+        <ion-card-title>走地通下載連結分享</ion-card-title>
+        <!&& <ion-card-subtitle>Card Subtitle</ion-card-subtitle> &&>
+      </ion-card-header>
+    
+      <ion-card-content>
+        祗需耍按下面藍色掣，就可以將走地通下載連結轉發到閣下手機的社交媒體或電子郵箱，於手機中打開連結即可下載及安裝。
+      </ion-card-content>
+
+      <ion-button style="margin-left: 16px;" (click)="webShare()">轉發</ion-button>
+    </ion-card>
+  </div>
+  -->
+
+  <!-- <h2>免費試用步驟</h2> text-align: center; -->
+
+  <!-- Bkup-01232022 <div *ngIf= "!running_on_mobile_boolean" style="display:flex; justify-content: center;"> -->
+  <div *ngIf= "!running_on_mobile_boolean" style="text-align: center;">
+    <!-- NOTE: 01262023 Took out the display: inline-block; -->
+    <!-- NOTE: 02222023 Took out the style="max-width: 1920px;" 
+        <ion-card style="max-width: 1920px;">
+    -->
+    <ion-card>
+      <!-- NOTE: Add width: 100%-->
+      <img style="width: 100%;" alt="免費試用" src="assets/img/Snapshot_12.PNG" />
+      <ion-card-header>
+        <ion-card-title style="text-align: justify; font-weight: bolder; font-size: 24px;">
+          如何使用走地易使用
+        </ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content style="text-align: justify;">
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="margin: 0; padding: 0; padding-left: 25px; font-size: 23px;">
+          <li>
+            由主頁按走地掣(圖片1)
+          </li>
+          <li>
+            於賽事選擇頁中按免費試用掣(圖片2)。注意：如免費試用掣為灰色，代表這賽馬日的免費試用名額已滿，而免費試用將於每個賽馬日前之排位日開始按受登記，額滿即止。用戶可於首頁按日票通掣購買數據服務。
+          </li>
+          <li>
+            於套餐選擇頁中按全餐及確認掣(圖片3)。
+          </li>
+          <li>
+            於登入/註冊頁中輸入已註冊的電郵地址及密碼後按確認掣，還未註冊用戶請按註冊掣(圖片4)。
+          </li>
+          <li>
+            成功登入後按進入交易區掣(圖片5)。
+          </li>
+          <li>
+            於交易頁中按藍色掣(圖片6)。
+          </li>
+          <li>
+            登記免費試用步驟已完成，按進入主頁掣(圖片7)。
+          </li>
+        </ol>
+      </ion-card-content>
+  
+      <!-- <ion-button style="margin-left: 16px;">Default</ion-button> -->
+    </ion-card>
+  </div> <!-- END: *ngIf= "!running_on_mobile_boolean" 用戶免費試用步驟 -->
+
+  <h1 *ngIf= "running_on_mobile_boolean" style="text-align: center;color: blue; 
+    font-size: 33px; margin-bottom: 0px;">如何使用走地易
+  </h1>
+  <div *ngIf= "running_on_mobile_boolean" style="overflow: scroll;">
+    <ion-row style="width: max-content;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 1</h2>
+        <!-- <img alt="免費試用" src="assets/img/mobile_1_rgts_main_screen_4_freeTrial.png" /> -->
+        <img #pinchElement alt="如何使用走地易" src="assets/img/How_To_Use_Chi_P1.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 2</h2>
+        <!-- How_To_Use_Chi_P2 -->
+        <img id=pinchElement1 alt="如何使用走地易" src="assets/img/How_To_Use_Chi_P2.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 3</h2>
+        <img id=pinchElement2 alt="如何使用走地易" src="assets/img/How_To_Use_Chi_P3A.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 4</h2>
+        <img id=pinchElement3 alt="如何使用走地易" src="assets/img/How_To_Use_Chi_P3B.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 5</h2>
+        <img id=pinchElement4 alt="如何使用走地易" src="assets/img/How_To_Use_Chi_P4.png" />
+      </ion-col>
+      <!-- <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 6</h2>
+        <img alt="免費試用" src="assets/img/mobile_Screenshot_20221017-181820_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 7</h2>
+        <img alt="免費試用" src="assets/img/mobile_Screenshot_20221017-181853_-RGTS.png" />
+      </ion-col> -->
+    </ion-row>
+  </div>
+  
+  <div *ngIf= "running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header style="padding-bottom: 0;">
+        <ion-card-title>走地易由三個部分組成包括:</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="padding-inline-start: 18px;">
+          <li>
+            高水(落飛馬),圖片1中有顏色的馬匹2,7,9,12為高水(落飛)馬。
+          </li>
+          <li>
+            旺指(旺勢指數),圖片2中有顏色的馬匹3,4,6為這埸旺指最高頭三位馬匹。
+          </li>
+          <li>
+            賽日數據,圖片3和4提供即時高水馬和旺指的即時報表(走勢)。這兩個報表配合高水馬和旺指的中位數,可以有效地優化即埸揀馬時的選擇範圍,十分有用。
+          </li>
+
+        </ol>
+        <div class="quickStarted">
+          走地易提供一個十分易用的介面,祇需要即場留意有顏色的馬匹,如圖片1中有顏色的馬匹2,7,9,12為高水(落飛)馬,而高水(落飛)馬的運算方法和走地通另一功能投注分佈(圖片5)的運算方法是完全一樣,建議大家參考以下摘錄於快速入門指南的資訊。
+        </div>
+      </ion-card-content>
+      <!-- <ion-button style="margin-left: 16px;">Default</ion-button> -->
+    </ion-card>
+  </div>
+  <h1 *ngIf= "running_on_mobile_boolean" style="text-align: center;color: blue; 
+  font-size: 23px; margin-bottom: 0px;font-weight: bold;">快速入門指南(即場-高水/低水馬)</h1>
+  <div *ngIf= "running_on_mobile_boolean" style="overflow: scroll;">
+    <ion-row style="width: 1237px;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 1</h2>
+        <img alt="快速入門指南(即場-高水/低水馬)" src="assets/img/mobile_Lenovo_M8_Screenshot_2022-10-20-11-40-37-833.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 2</h2>
+        <img alt="快速入門指南(即場-高水/低水馬)" src="assets/img/mobile_Lenovo_Race_Select_Screenshot_2022-10-20-11-47-06-647.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 3</h2>
+        <img alt="快速入門指南(即場-高水/低水馬)" src="assets/img/mobile_Screenshot_20221102-180449_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 4</h2>
+        <img alt="快速入門指南(即場-高水/低水馬)" src="assets/img/mobile_Screenshot_20221102-234714_-RGTS.png" />
+      </ion-col>
+      <!-- Screenshot_20241209_215126_-RGTS.png -->
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 5</h2>
+        <img style="width: 237px; height: 379px;" alt="快速入門指南(即場-高水/低水馬)" src="assets/img/Screenshot_20241209_215126_-RGTS.png" />
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf= "running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header style="padding-bottom: 0;">
+        <ion-card-title>
+          <div>快速入門指南(即場-高水/低水馬)</div>
+          <div>(注意：此用法對於那些用戶在這即場賽事中的參戰馬狀態、操練表現、往績數據等已有一定掌握較為合適)</div>
+        </ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="padding-inline-start: 18px;">
+          <li>
+            由主頁按走地掣(圖片1)
+          </li>
+          <li>
+            於賽事選擇頁中按投注分佈掣(圖片2)。
+          </li>
+          <li>
+            向左方滾動至運指數據欄(圖片3)，預設即場高水/低水馬數據(圖片3)將會按照不同時段自動更新。
+          </li>
+          <li>
+            投注分佈設計源於一條簡單公式：<span class="text_bolder">賠率＝？</span>。舉個例子：金鎗六十於某埸賽事獨贏賠率為1.5倍大熱門，代表金鎗六十於這場賽事中實力狀態"比較"同場對手為高(最高/最好實力狀態)，用英文字母A代表大熱門、B代表次熱門、C代表第三熱門等等，再用A代表實力狀態最高馬匹，B代表實力狀態排序第二馬匹，C排序第三等等，將金鎗六十套用以上公式(標籤): A = A，走地通會標籤金鎗六十於這埸賽事為平水大熱門馬；假如金鎗六十於這埸賽事獨贏賠率為2.3倍次熱門(B)，套用以上公式(標籤)為: B = A 走地通會標籤金鎗六十於這埸賽事為低水馬。而投注分佈就是將這公式(標籤)擴大、優化和自動化。首先，投注分佈不祇是單看獨贏賠率，而是將所有可計算到的投注種類分為三個組合，第一組合：獨贏(W)，位置(P)，孖寶(D) WPD，第二組合：連贏(Q)、位置Q(QP) Q+QP，第三組合: 第一組合+第二組合 WPD+QQP。所有組合數據建基於馬會即時投注額，100%透明度。
+          </li>
+          <li>
+            走地通將每場30分鐘賽事區分成7個時段：1分鐘，3分鐘， 馬匹離開沙圈，過關後，過關前，2場過關前，隔夜。再將這些時段分為2組: 沙後(1分鐘,3分鐘,馬匹離沙圈)、沙前(過關後,過關前,2場過關前,隔夜)，投注分佈如圖片3:預設即場高水/低水馬欄中選用了時段淨流入數據作為與AI排序欄(實力狀態)比較及釐定高水/低水馬。
+          </li>
+          <li>
+            參考圖片4中之1號馬，於1分鐘時段其獨贏(W)，位置(P)，孖寶(D) WPD投注額的總和為$2,207,736，而3分鐘時段則為$1,850,385，所以1號馬在1分鐘到3分鐘時段淨流入投注金額是$357,351($2,207,736 - $1,850,385)，同樣地用英文字母A代表最高淨流入投注金額，B代表第二高淨流入投注金額，C代表第三高等，再將這組數據顯示在WPD(沙後)數據欄中(圖片4)，其他時段淨流入數據亦是同樣做法。而於預設即場高水/低水馬欄中的英文字母為綠色，代表這時段的排序高過對上一個時段排序(A最高，N最低-14匹馬)。
+          </li>
+          <li>
+            投注分佈運用人工智能，於每場賽事中計算馬匹實力狀態，然後用英文字母去排序，A為最高(好)實力狀態，N為最低(差)實力狀態-14匹馬，這組數據將於AI排序欄中顯示。而馬匹實力狀態計算方法包括晨操完整性，往績同程時間比較，騎練配搭，馬匹體重，配備轉變，同場對賽成績等。正如之前金鎗六十例子一樣將AI排序欄數據(馬匹實力狀態)比較預設即場高水/低水馬欄中所有時段投注金額淨流入數據從以標籤各參賽馬匹為高水或低水馬。例如1號馬(圖片4)AI排序為B，而於WPD(沙後)1分鐘到3分鐘淨流入投注金額排序為G，所以1號馬於這時段標籤為低水馬，而投注分佈會自動化地執行這比較工序，用不同顏色顯示於馬號、馬名欄中，如圖片4中這場賽事高水馬為4,5,8,9,11。
+          </li>
+          <li>
+            走地易亦會同樣地顯示相同的高水馬(圖片5)。
+          </li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf= "running_on_mobile_boolean" style="overflow: scroll;">
+    <ion-row style="width: max-content;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">旺指(圖片1)</h2>
+        <!-- How_To_Use_Chi_P2 Screenshot_20241211_001615_-RGTS -->
+        <img id=pinchElement1 alt="旺勢指數" src="assets/img/How_To_Use_Chi_P2.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 2</h2>
+        <!-- How_To_Use_Chi_P2 Screenshot_20241211_001615_-RGTS -->
+        <img id=pinchElement1 alt="旺勢指數" src="assets/img/Screenshot_20241211_001615_-RGTS.png" />
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf= "running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header style="padding-bottom: 0;">
+        <ion-card-title>旺指(旺勢指數):</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="padding-inline-start: 18px;">
+          <li>
+            旺勢指數由賽馬日第二場開始，計算所有已完成賽事的騎師、練馬師、檔位、馬匹編號等之綜合表現，再將以上元素融合變成一個數字，圖片1中有顏色的馬匹3,4,6為這埸旺指最高頭三位馬匹。而這指數將由第2場賽事開始，開跑前大約10分鐘自動傳送到用户的手機或設備中。
+          </li>
+          <li>
+            旺指(旺勢指數)亦和走地通另一功能:"賠率"(圖片2)，提供即場賠率數據，以下資訊是摘錄於快速入門指南"即場賠率 + 旺勢指數"供大家參考。
+          </li>
+        </ol>
+      </ion-card-content>
+      <!-- <ion-button style="margin-left: 16px;">Default</ion-button> -->
+    </ion-card>
+  </div>
+  <!-- START: CA-01262023 *ngIf= "running_on_mobile_boolean" AND use vipodds + NSI as main method -->
+  <h1 *ngIf= "running_on_mobile_boolean" style="text-align: center;color: blue; 
+  font-size: 23px; margin-bottom: 0px;font-weight: bold;">快速入門指南(即場賠率 + 旺勢指數)</h1>
+  <div *ngIf= "running_on_mobile_boolean" style="overflow: scroll;">
+    <!-- NOTE: 01262023 3070 = 300x10 + 9x10 (5px padding on each ion-col 1st and last no padding)-->
+    <ion-row style="width: 3090px;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 1</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_Lenovo_M8_Screenshot_2022-10-20-11-40-37-833.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 2</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p2_Lenovo_QS_Raceselect_2023-01-25-00-13-13-677.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 3</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p3_Lenovo_QS_vipodds_2023-01-24-23-49-59-129.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 4</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p4_Lenovo_QS_vipodds_2023-01-25-00-05-34-425.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 5</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p5_Lenovo_QS_vipodds_2023-01-25-03-14-45-358.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 6</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p6_Lenovo_QS_intro_video_2023-01-26-04-14-23-787.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 7</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p7_Lenovo_Qs_intro_video_2023-01-26-04-14-43-340.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 8</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p8_Lenovo_QS_userconnect_2023-01-26-04-15-11-081.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 9</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p9_Lenovi_QS_userconnect_2023-01-26-04-16-28-664.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 10</h2>
+        <img alt="快速入門指南(即場賠率 + 旺勢指數)" src="assets/img/mobile_p10_Lenovo_QS_userconnect_2023-01-26-04-17-20-791.png" />
+      </ion-col>
+    </ion-row>
+  </div>
+  <div *ngIf= "running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header style="padding-bottom: 0;">
+        <ion-card-title>快速入門指南(即場賠率 + 旺勢指數)</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="padding-inline-start: 18px;">
+          <li>
+            由主頁按走地掣(圖片1)
+          </li>
+          <li>
+            於賽事選擇頁中按賠率掣(圖片2)。
+          </li>
+          <li>
+            進入介面後再按獨贏走勢掣(圖片3)，用戶亦可按圖片3紅色框中的藍色箭咀掣來查看其他即時賠率，而籃色手指是數據排序掣。
+          </li>
+          <li>
+            旺勢指數(旺指)將由第2場賽事開始於即場開跑前大約10分鐘自動顯示(圖片4)，旺指顯示後先按排序掣(圖片5)
+          </li>
+          <li>
+            建議採用三揀一方法，由旺指最高頭三位馬匹中選擇一匹馬，獨立投注位置或獨贏位置彩池。以圖片5為例，這場馬旺指頭三位馬匹為：8號賞心星，12號驃騎飛，10號鑽兩鑽。用戶亦可運用這賠率介面查閱這三匹或其他出賽馬匹的賠率走勢，其用法非常簡單，但亦請先於首頁功能簡介中按賠率走勢(圖片6)，觀看相關影片(圖片7)從而獲取更多資訊和精準使用方法；亦可參考下面旺勢指數環節。
+          </li>
+          <li>
+            用戶亦可於首頁中按用戶資訊(圖片8)，查閱最近一個賽馬日走地通數據服務的表現：圖片9、圖片10(旺指)。
+          </li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <!-- END: CA-01262023 *ngIf= "running_on_mobile_boolean" AND use vipodds + NSI as main method -->
+
+  <h1 *ngIf= "running_on_mobile_boolean" style="text-align: center;color: blue; 
+    font-size: 33px; margin-bottom: 0px;">賽日數據(中位數)
+  </h1>
+  <div *ngIf= "running_on_mobile_boolean" style="overflow: scroll;">
+    <ion-row style="width: max-content;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 1</h2>
+        <!-- <img alt="免費試用" src="assets/img/mobile_1_rgts_main_screen_4_freeTrial.png" /> -->
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_072150_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 2</h2>
+        <!-- How_To_Use_Chi_P2 -->
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_072026_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 3</h2>
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_072122_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 4</h2>
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_095751_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 5</h2>
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_095803_-RGTS.png" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 6</h2>
+        <img alt="賽日數據" src="assets/img/Screenshot_20241210_095819_-RGTS.png" />
+      </ion-col>
+    </ion-row>
+
+    <!-- New row with additional images -->
+    <ion-row style="width: max-content;">
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 7</h2>
+        <img id="pinchElement5" alt="賽日數據" src="assets/img/Snapshot_139.png" class="responsive-img" />
+      </ion-col>
+      <ion-col>
+        <h2 style="color: black; text-align: center;">圖片 8</h2>
+        <img id="pinchElement6" alt="賽日數據" src="assets/img/Snapshot_137.png" class="responsive-img" />
+      </ion-col>
+    </ion-row>
+
+    <!-- Button to toggle meta tag for zoom --> 
+    <!-- <ion-button (click)="toggleZoom()">Toggle Zoom_7</ion-button> -->
+
+  </div>  
+
+  <div *ngIf= "running_on_mobile_boolean" style="display:flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header style="padding-bottom: 0;">
+        <ion-card-title>賽日數據(中位數)</ion-card-title>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- Here's a small text description for the card content. Nothing more, nothing less. -->
+        <ol class="quickStarted" style="padding-inline-start: 18px;">
+          <li>
+            於走地易介面按賽日數據掣(圖片1)。
+          </li>
+          <li>
+            從過去三個馬季數據分析高水/低水馬入三甲比例大約為5.4比4.6，每個賽馬日高水馬入三甲的百分率為54%，低水馬為46%。例如某個賽馬日有10場賽事，總共有30匹馬入到頭三名，所以會有大約16匹高水馬入到三甲。
+          </li>
+          <li>
+            (重要)充份利用16匹高水馬入到三甲這中位數，例如當跑完第6/7場賽事後，己有11/12匹高水馬入到三甲，投注組合就不應祗選取高水馬，以1拖3投注組合為例，高低水馬比例建議為2比2，二匹高水+二匹低水馬。重點是應透過賽日數據和走地易所顯示的高水馬，撿視用戶自己將投注的馬匹是屬於高水或低水，而不是祇跟買高水馬。
+          </li>
+          <li>
+            從過去三個馬季數據分析旺指最高頭三位馬匹入三甲的中位數為8(圖片7,圖片8)。
+          </li>
+          <li>
+            (重要)充份利用8匹旺指最高頭三位馬匹入三甲的中位數，例如當跑完第6/7場賽事後，己有6/7旺指最高頭三位馬匹入三甲，如繼續採用旺指揀選馬匹的話，可以考慮揀選旺指排行第四,第五和第六位之馬匹，因為旺指最高頭三位馬匹再入三甲的機率會較低。
+          </li>
+          <li>
+            如何同時運用高水馬入三甲和旺指最高頭三位馬匹入三甲數據揀選馬匹?看一個實例，圖片2和圖片3是2024年12月1日沙田的賽日數據報表，假如現在是剛跑完第5場而需要揀選第6場馬匹，從圖片2高水馬入三甲報表看到第5場有3匹高水馬入三甲(全中)，但正如以上所提到的中位數要點，第6場再有兩匹或以上的高水馬入三甲的機率會相對較低，如果投注策略是一膽拖三腳的話，第6場所揀選的4匹馬就應以2匹高水馬+2匹低水馬組合較好。再看圖片3旺指最高頭三位馬匹入三甲報表，第4場和第5場都沒有旺指最高頭三位馬匹入三甲，再採用以上中位數策略，一膽拖三腳的話最少起碼要由旺指最高頭三位馬匹揀選1匹或2匹馬，而馬膽亦應由旺指最高頭三位馬匹中揀選，然後再根據這1或2匹馬的高低水情況再從高水馬數據揀選餘下馬匹，這樣揀中第6場入三甲馬匹的機率會較高。
+          </li>
+          <li>
+            建議用戶於非賽馬日時應多參考過往賽日數據(圖片4,圖片5,圖片6)，由於高水馬和旺指本身都帶有慣性和模式，多看多睇自然會於即場時掌握得更好。
+          </li>
+          <li>
+            祝順利好運!
+          </li>
+        </ol>
+      </ion-card-content>
+      <!-- <ion-button style="margin-left: 16px;">Default</ion-button> -->
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- <ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Footer - No Border</ion-title>
+  </ion-toolbar>
+</ion-footer> -->
